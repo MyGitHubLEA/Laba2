@@ -3,7 +3,7 @@
 #include <string>
 #include <iostream>
 
-template <typename T> // возможно нужно написать перед классом Node
+template <typename T>
 class LinkedList 
 {
 public: 
@@ -12,7 +12,7 @@ public:
 		this->ListSize = size;
 		this->FirstNode = new Node<T> (items[0]);
 		Node <T>* current = this->FirstNode;
-		for (int i = 1; i < size; ++i) //пусть размер 3, 
+		for (int i = 1; i < size; ++i) //ГЇГіГ±ГІГј Г°Г Г§Г¬ГҐГ° 3, 
 		{
 			Node<T>* ptr = new Node <T>(items[i]);
 			current->NextElemPtr = ptr;
@@ -32,7 +32,7 @@ public:
 			throw std::out_of_range("Indexes are out of range\n");
 		++endIndex;
 		LinkedList* newList = new LinkedList<T>();
-		for (int i = startIndex; i < endIndex; ++i) //пусть размер 3, 
+		for (int i = startIndex; i < endIndex; ++i) //ГЇГіГ±ГІГј Г°Г Г§Г¬ГҐГ° 3, 
 			newList->Append(this->Get(i));
 		return newList;
 	}
@@ -40,7 +40,7 @@ public:
 	void Print()
 	{
 		Node <T>* current = this->FirstNode;
-		for (int i = 0; i < this->ListSize; ++i) //пусть размер 3, 
+		for (int i = 0; i < this->ListSize; ++i) //ГЇГіГ±ГІГј Г°Г Г§Г¬ГҐГ° 3, 
 		{
 			std::cout << current->Data;
 			current = current->NextElemPtr;
